@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainController">
+   <children>
+   		<TextArea fx:id="textArea" layoutX="10" layoutY="460" prefHeight ="120" prefWidth = "580"/>
+      <Button fx:id="addButton" layoutX="130" layoutY="240" mnemonicParsing="false" text="Add Student" onAction="#handleAdd">
+         <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+        </Button>
+      <Label layoutX="80" layoutY="40" text="Name" />
+      <Label layoutX="80" layoutY="80" text="Major" />
+      <Label layoutX="75" layoutY="140" text="Status" />
+      <Label layoutX="45" layoutY="200" text="Credit Hours" />
+      <Label layoutX="45" layoutY="355" text="Study Abroad" />
+      <Label layoutX="55" layoutY="384" text="Pay Tuition" />
+      <Label layoutX="90" layoutY="420" text="Date" />
+      <Label layoutX="300" layoutY="384" text="Financial Aid" />
+      <TextField fx:id="nameField" layoutX="130" layoutY="40" prefHeight="25" prefWidth="400" />
+      <TextField fx:id="creditField" layoutX="130" layoutY="200" prefHeight="25" prefWidth="100" />
+      <TextField fx:id="tuitionField" layoutX="130" layoutY="380" prefHeight="25" prefWidth="100" />
+      <TextField fx:id="financialField" layoutX="380" layoutY="380" prefHeight="25" prefWidth="100" />
+      <TextField fx:id="dateField" layoutX="130" layoutY="415" prefHeight="25" prefWidth="100" />
+      <Button layoutX="220" layoutY="240" mnemonicParsing="false" text="Remove Student" onAction="#handleDelete">
+         <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </Button>
+      <Button layoutX="130" layoutY="280" mnemonicParsing="false" text="Print" onAction="#handlePrint">
+         <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </Button>
+      <Button layoutX="175" layoutY="280" mnemonicParsing="false" text="Print by Name" onAction="#handlePrintName">
+         <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </Button>
+      <Button layoutX="278" layoutY="280" mnemonicParsing="false" text="Print by Payment" onAction="#handlePrintPayment">
+         <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </Button>
+      <Button layoutX="130" layoutY="320" mnemonicParsing="false" text="Tuition Due" onAction="#handleTuitionDue">
+         <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </Button>
+      <Button layoutX="220" layoutY="320" mnemonicParsing="false" text="Calculate Tuition Dues" onAction="#handleCalculateTuition">
+         <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </Button>
+      <Button layoutX="240" layoutY="380" mnemonicParsing="false" text="Pay" onAction="#handlePay">
+         <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </Button>
+      <Button layoutX="240" layoutY="350" mnemonicParsing="false" text="Update" onAction="#handleStudy">
+         <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </Button>
+      <Button layoutX="490" layoutY="380" mnemonicParsing="false" text="Set" onAction="#handleSet">
+         <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </Button>
+       <RadioButton fx:id="cs" layoutX = "140" layoutY="80" text ="CS">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="ee" layoutX = "200" layoutY="80" text ="EE">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="me" layoutX = "260" layoutY="80" text ="ME">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="it" layoutX = "320" layoutY="80" text ="IT">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="ba" layoutX = "380" layoutY="80" text ="BA">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="resident" layoutX = "140" layoutY="140" text ="Resident">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="nonresident" layoutX = "220" layoutY="140" text ="NonResident">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="tristate" layoutX = "140" layoutY="160" text ="TriState">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="newyork" layoutX = "220" layoutY="160" text ="New York">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="connecticut" layoutX = "300" layoutY="160" text ="Connecticut">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="international" layoutX = "140" layoutY="180" text ="International">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="studyAbroad" layoutX = "240" layoutY="180" text ="Study Abroad">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="SAtrue" layoutX = "130" layoutY="355" text ="True">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="SAfalse" layoutX = "180" layoutY="355" text ="False">
+      <font>
+            <Font name="Gill Sans MT" size="12" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>
